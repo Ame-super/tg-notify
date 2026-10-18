@@ -1,0 +1,26 @@
+name: Отправить сообщение
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "Текст сообщения"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Отправить в Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MESSAGE: ${{ inputs.text }} # через переменную, а не в команду — так безопаснее
+        run: python3 send.py
