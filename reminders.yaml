@@ -81,10 +81,12 @@ reminders:
     time: "12:00"
     text: |
       Бэкап Switch 🎮 (консоль на зарядке!)
-      1. Перезагрузка в Hekate → Tools → Backup eMMC
-         • eMMC BOOT0 & BOOT1
-         • eMMC RAW GPP (15–30 мин, ~30 ГБ)
-      2. Tools → USB Tools → SD Card → кабель к ПК
+      Вход в Hekate: перезагрузка → на надписи Ultra жми «громкость −»
+      1. ГЛАВНОЕ: Tools → USB Tools → SD Card → кабель к ПК
          скопировать ВСЁ с карты в папку на компьютере
-         (если Windows предложит форматировать — Отмена!)
-      3. Windows: Извлечь → Hekate: Close → Home → Launch → прошивка
+         (на карте лежит emuNAND с сохранениями!)
+         Если Windows предложит форматировать — Отмена!
+      2. Windows: Извлечь → Hekate: Close
+      3. По желанию: Tools → Backup eMMC → BOOT0 & BOOT1, потом RAW GPP
+         (бэкап чистой системы, ~30 ГБ, 15–30 мин)
+      4. Home → Launch → Atmosphere
